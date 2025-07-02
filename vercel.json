@@ -22,13 +22,5 @@
         }
       ]
     }
-  ],
-  "env": {
-    "DATABASE_URL": "Required: Your NeonDB connection string (postgresql://user:password@host/database?sslmode=require)",
-    "STRIPE_SECRET_KEY": "Required: Your Stripe secret key for payments (sk_test_...)",
-    "STRIPE_WEBHOOK_SECRET": "Required: Secret for verifying Stripe webhook events (whsec_...)",
-    "BASE_URL": "Required: Your application URL (https://your-app.vercel.app)",
-    "AUTH_SECRET": "Required: Secret for JWT authentication (generate with openssl rand -hex 32)",
-    "NODE_ENV": "production"
-  }
+  ]
 }
