@@ -24,11 +24,11 @@
     }
   ],
   "env": {
-    "DATABASE_URL": "postgresql://neondb_owner:npg_T2u7ZaIDmXEC@ep-tight-tooth-a18lbcq9-pooler.ap-southeast-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require",
-    "STRIPE_SECRET_KEY": "sk_test_51QqWMMCfVKWMehneo4muwKP7LLCbkVCcmmOhdzSdlVNtYq1JTw97xauiMXGz7fUrDbfQygbI7sDQFCcVDoWDRFZA00UTf2uT68",
-    "STRIPE_WEBHOOK_SECRET": "whsec_30a1f6a7d199d816ba0174c3d6590c448c1acf4b79afcefa6cd4405a3515f58e",
-    "BASE_URL": "http://localhost:3000",
-    "AUTH_SECRET": "3c56696a1a1351aed94713a40338a9e8ef98e98d308f18fbcbd1b960e2a01526",
+    "DATABASE_URL": "Required: Your NeonDB connection string (postgresql://user:password@host/database?sslmode=require)",
+    "STRIPE_SECRET_KEY": "Required: Your Stripe secret key for payments (sk_test_...)",
+    "STRIPE_WEBHOOK_SECRET": "Required: Secret for verifying Stripe webhook events (whsec_...)",
+    "BASE_URL": "Required: Your application URL (https://your-app.vercel.app)",
+    "AUTH_SECRET": "Required: Secret for JWT authentication (generate with openssl rand -hex 32)",
     "NODE_ENV": "production"
   }
 }
