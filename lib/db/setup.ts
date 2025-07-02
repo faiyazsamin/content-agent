@@ -89,9 +89,9 @@ async function getPostgresURL(): Promise<string> {
     return 'postgres://postgres:postgres@localhost:54322/postgres';
   } else {
     console.log(
-      'You can find Postgres databases at: https://vercel.com/marketplace?category=databases'
+      'You can find Postgres databases at NeonDB (https://neon.tech) or other providers like Vercel (https://vercel.com/marketplace?category=databases)'
     );
-    return await question('Enter your POSTGRES_URL: ');
+    return await question('Enter your DATABASE_URL from NeonDB: ');
   }
 }
 
@@ -196,14 +196,14 @@ async function writeEnvFile(envVars: Record<string, string>) {
 async function main() {
   await checkStripeCLI();
 
-  const POSTGRES_URL = await getPostgresURL();
+  const DATABASE_URL = await getPostgresURL();
   const STRIPE_SECRET_KEY = await getStripeSecretKey();
   const STRIPE_WEBHOOK_SECRET = await createStripeWebhook();
   const BASE_URL = 'http://localhost:3000';
   const AUTH_SECRET = generateAuthSecret();
 
   await writeEnvFile({
-    POSTGRES_URL,
+    DATABASE_URL,
     STRIPE_SECRET_KEY,
     STRIPE_WEBHOOK_SECRET,
     BASE_URL,

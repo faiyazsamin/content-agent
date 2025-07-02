@@ -105,7 +105,7 @@ In your Vercel project settings (or during deployment), add all the necessary en
 1. `BASE_URL`: Set this to your production domain.
 2. `STRIPE_SECRET_KEY`: Use your Stripe secret key for the production environment.
 3. `STRIPE_WEBHOOK_SECRET`: Use the webhook secret from the production webhook you created in step 1.
-4. `POSTGRES_URL`: Set this to your production database URL.
+4. `DATABASE_URL`: Set this to your NeonDB or other PostgreSQL database URL.
 5. `AUTH_SECRET`: Set this to a random string. `openssl rand -base64 32` will generate one.
 
 ## Other Templates
@@ -117,3 +117,7 @@ While this template is intentionally minimal and to be used as a learning resour
 - https://makerkit.dev
 - https://zerotoshipped.com
 - https://turbostarter.dev
+
+## Deployment
+
+This project is ready to be deployed on Vercel. For detailed deployment instructions, see [VERCEL_DEPLOYMENT.md](./VERCEL_DEPLOYMENT.md).
